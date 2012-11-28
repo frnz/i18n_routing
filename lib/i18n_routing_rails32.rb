@@ -42,6 +42,7 @@ module I18nRouting
             opts = options.dup
             opts[:path] = localized_path
             opts[:controller] ||= r.to_s.pluralize
+            opts[:locale] = locale.to_sym
             
             resource = resource_from_params(type, r, opts.dup)
 
